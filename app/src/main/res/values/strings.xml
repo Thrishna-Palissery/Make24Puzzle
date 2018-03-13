@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Make24</string>
+    <string name="text_time">Time</string>
+    <string name="text_attempt">Attempt</string>
+    <string name= "text_succeeded">Succeeded</string>
+    <string name= "text_skipped">Skipped</string>
+</resources>

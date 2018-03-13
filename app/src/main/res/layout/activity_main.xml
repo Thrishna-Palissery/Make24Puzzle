@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout"
+    android:background="@drawable/background_color">
+    tools:context=".MainActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/gradient_blue"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/text_view_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_time"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart = "10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    <TextView
+        android:id="@+id/edit_text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_toEndOf="@+id/text_view_time"
+        android:layout_marginLeft="51dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:id="@+id/text_view_Attempt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="138dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:text="@string/text_attempt" />
+
+    <TextView
+        android:id="@+id/edit_text_Attempt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="40dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:background="@android:drawable/editbox_background_normal" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout1">
+
+        <TextView
+            android:id="@+id/text_view_succeeded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/text_succeeded"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginStart = "10dp"/>/>
+
+        <TextView
+            android:id="@+id/edit_text_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:background="@android:drawable/editbox_background_normal"
+            />
+        <TextView
+            android:id="@+id/text_view_Skipped"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginStart="140dp"
+            android:text="@string/text_skipped" />
+
+        <TextView
+            android:id="@+id/edit_text_skipped"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:background="@android:drawable/editbox_background_normal" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3"
+        android:layout_below="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/txtScreen"
+            android:layout_width="match_parent"
+            android:layout_height= "100dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:clickable="false"
+            android:maxLength="16"
+            android:padding="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="109dp"
+            android:layout_marginTop="50dp"
+            android:gravity="right"
+            android:textSize="50dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4"
+        android:layout_below="@+id/linearLayout3">
+        <Button
+            android:id="@+id/button1"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="25dp"
+            android:state_enabled="true" />
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="2dp"
+            android:state_enabled="true"/>
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="2dp"
+            android:state_enabled="true" />
+        <Button
+            android:id="@+id/button4"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="2dp"
+            android:state_enabled="true"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout5"
+        android:layout_below="@+id/linearLayout4">
+        <Button
+            android:id="@+id/buttonAdd"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="25dp"
+            android:text="+"
+            android:state_enabled="true"/>
+        <Button
+            android:id="@+id/buttonSub"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="2dp"
+            android:text="-" />
+        <Button
+            android:id="@+id/buttonMul"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="2dp"
+            android:text="*" />
+        <Button
+            android:id="@+id/buttonDiv"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="2dp"
+            android:text="/" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout6"
+        android:layout_below="@+id/linearLayout5">
+        <Button
+            android:id="@+id/button_ParLef"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="25dp"
+            android:text="(" />
+        <Button
+            android:id="@+id/button_ParRgt"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="2dp"
+            android:text=")" />
+        <Button
+            android:id="@+id/button_Clear"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="2dp"
+            android:text="Back"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/button_Done"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="2dp"
+            android:text="Done"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+</RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer"
+    app:headerLayout="@layout/nav_header"/>
+</android.support.v4.widget.DrawerLayout>
+
+
+
